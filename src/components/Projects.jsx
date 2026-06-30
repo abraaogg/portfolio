@@ -10,21 +10,21 @@ function Projects() {
       image: notesImg,
       title: "Notes",
       description: "Create and manage notes.",
-      github: "https://github.com/...",
+      page: "https://github.com/...",
     },
     {
       id: 2,
       image: todoImg,
       title: "To-Do List",
       description: "Organize tasks with ease.",
-      github: "https://github.com/...",
+      page: "https://todo-list-five-theta-29.vercel.app/",
     },
     {
       id: 3,
       image: weatherImg,
       title: "Weather",
       description: "Live weather forecasts.",
-      github: "https://github.com/...",
+      page: "https://github.com/...",
     },
   ];
   return (
@@ -39,7 +39,7 @@ function Projects() {
               <p>{project.description}</p>
             </div>
 
-            <a href={project.github} target="_blank">
+            <a href={project.page} target="_blank">
               VIEW PROJECT
             </a>
           </div>
