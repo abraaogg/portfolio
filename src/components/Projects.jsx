@@ -10,7 +10,7 @@ function Projects() {
       image: notesImg,
       title: "Notes",
       description: "Create and manage notes.",
-      page: "https://github.com/...",
+      page: "https://notes-omega-ruby.vercel.app/",
     },
     {
       id: 2,

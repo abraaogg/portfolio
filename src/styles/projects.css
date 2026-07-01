@@ -1,4 +1,6 @@
 .projects {
+  min-height: 50vh;
+  background-color: #dedede;
   padding: 2% 4%;
   min-height: 100vh;
   display: flex;
@@ -8,7 +10,7 @@
 
 .projects h2 {
   font-size: 3rem;
-  margin-bottom: 4rem;
+  margin: 4rem 0;
 }
 
 .cards {
