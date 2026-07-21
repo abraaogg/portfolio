@@ -9,6 +9,11 @@
   color: var(--subtitle-color);
 }
 
+.projects-content {
+  width: 80vw;
+  margin: 0 auto;
+}
+
 .projects h2 {
   font-size: 3rem;
   margin: 4rem 0;
@@ -23,7 +28,6 @@
 }
 
 .card {
-  width: 80vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -88,9 +92,14 @@
 }
 
 @media (min-width: 1200px) {
+  .projects-content {
+    width: 90vw;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
   .cards {
     flex-direction: row;
-    max-width: 1200px;
+
     margin: 0 auto;
     gap: 2rem;
   }

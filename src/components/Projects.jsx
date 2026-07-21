@@ -29,6 +29,7 @@ function Projects() {
   ];
   return (
     <div className="projects">
+      <div className="projects-content">
       <h2>PROJECTS</h2>
       <div className="cards">
         {projects.map((project) => (
@@ -44,6 +45,7 @@ function Projects() {
             </a>
           </div>
         ))}
+      </div>
       </div>
     </div>
   );
