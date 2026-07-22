@@ -1,0 +1,6 @@
+.about {
+  min-height: 50vh;
+  background-color: #dedede;
+  display: flex;
+  flex-direction: column;
+}
