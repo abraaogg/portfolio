@@ -1,6 +1,44 @@
 .about {
-  min-height: 50vh;
   background-color: #dedede;
+  color: var(--subtitle-color);
+}
+
+.about-container {
+  padding: 2rem;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
+}
+
+.about-container h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.about-container img {
+  /* Modern Sizing */
+  width: 100%;
+  max-width: 280px; /* Prevents it from getting too large on desktop */
+  aspect-ratio: 1 / 1; /* Keeps it a perfect square (or 4/3 for a rectangle) */
+  object-fit: cover; /* Crops nicely without stretching/distorting the image */
+
+  border-radius: 16px; /* Smooth rounded corners*/
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1); /* Soft, subtle modern drop shadow */
+
+  display: block;
+  margin: 1.5rem auto; /* Centers the image with top/bottom spacing */
+}
+
+.about-container p {
+  /* Typography & Readability */
+  font-size: 1.05rem;
+  line-height: 2; /* Gives the text room to breathe */
+
+  /* Layout & Spacing */
+  margin: 1.5rem auto; /* Centers the block and adds vertical spacing */
+  text-align: center; /* Align center (or change to 'left' for standard alignment) */
+
+  /* Fine-tuning */
+  letter-spacing: -0.01em; /* Slightly tighter tracking for a modern feel */
 }
