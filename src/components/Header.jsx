@@ -7,7 +7,6 @@ function Header() {
     { name: "HOME", id: "home" },
     { name: "PROJECTS", id: "projects" },
     { name: "ABOUT", id: "about" },
-    { name: "CONTACT", id: "contact" },
   ];
 
   const [menuOpen, setMenuOpen] = useState(false);

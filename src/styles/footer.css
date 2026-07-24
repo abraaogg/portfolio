@@ -1,0 +1,111 @@
+.footer {
+  background-color: #081a1b;
+  color: #ffffff;
+  padding: 40px 24px 24px 24px; /* Cozy mobile padding */
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column; /* Stack vertically on mobile */
+  gap: 32px;
+  margin-bottom: 32px;
+}
+
+.footer-brand h3 {
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin: 0 0 6px 0;
+}
+
+.footer-brand p {
+  color: #819c9e;
+  font-size: 11px;
+  margin: 0;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column; /* Stack navigation & social vertically on small mobile */
+  gap: 24px;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-col h4 {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 0 0 8px 0;
+  color: #ffffff;
+}
+
+.footer-col a {
+  color: #819c9e;
+  font-size: 11px;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-col a:hover {
+  color: #ffffff;
+}
+
+.footer-bottom {
+  border-top: 1px solid #132b2d;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column-reverse; /* Put "Back to top" above copyright for thumb reach */
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.footer-bottom p {
+  color: #587375;
+  font-size: 10px;
+  margin: 0;
+}
+
+.back-to-top {
+  background: none;
+  border: none;
+  color: #819c9e;
+  font-size: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s ease;
+}
+
+.back-to-top:hover {
+  color: #ffffff;
+}
+
+@media (min-width: 768px) {
+  .site-footer {
+    padding: 50px 70px 25px 70px; /* Generous desktop padding */
+  }
+
+  .footer-content {
+    flex-direction: row; /* Side-by-side brand and links */
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 40px;
+  }
+
+  .footer-links {
+    flex-direction: row; /* Columns sit next to each other */
+    gap: 60px;
+  }
+
+  .footer-bottom {
+    flex-direction: row; /* Horizontal bottom bar */
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+  }
+}

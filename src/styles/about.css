@@ -9,6 +9,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  gap: 12px;
 }
 
 .about-container h2 {
@@ -38,7 +39,74 @@
   /* Layout & Spacing */
   margin: 1.5rem auto; /* Centers the block and adds vertical spacing */
   text-align: center; /* Align center (or change to 'left' for standard alignment) */
+  width: 100%;
+  max-width: 650px;
 
   /* Fine-tuning */
   letter-spacing: -0.01em; /* Slightly tighter tracking for a modern feel */
+}
+
+/* Primary Gmail Button */
+.gmail-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 260px;
+  height: 46px;
+  background-color: var(--subtitle-color);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-decoration: none;
+  border-radius: 8px;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+}
+
+.gmail-btn:hover {
+  background-color: #112d2f;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(8, 26, 27, 0.2);
+}
+
+/* Social Pills Wrapper */
+.social-pills {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Individual Social Pill Links */
+.social-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 32px;
+  background-color: #ffffff;
+  color: #333333;
+  border: 1px solid #cccccc;
+  border-radius: 16px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+  margin-bottom: 2rem;
+}
+
+.social-pill:hover {
+  border-color: var(--subtitle-color);
+  color: var(--subtitle-color);
+  background-color: #f7f7f7;
+  transform: translateY(-1px);
+}
+
+@media (min-width: 1200px) {
+  .about-container p{
+    font-size: 1.4rem;
+  }
 }
