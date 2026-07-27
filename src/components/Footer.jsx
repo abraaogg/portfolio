@@ -1,11 +1,12 @@
-import React from 'react';
-import '../styles/footer.css';
+import React from "react";
+import "../styles/footer.css";
+import { GoArrowUpRight } from "react-icons/go";
 
 const Footer = () => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth',
+      behavior: "smooth",
     });
   };
 
@@ -29,9 +30,27 @@ const Footer = () => {
 
           <div className="footer-col">
             <h4>CONNECT</h4>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer">Twitter ↗</a>
+            <a
+              href="https://www.linkedin.com/in/abra%C3%A3o-grig%C3%B3rio/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn <GoArrowUpRight />
+            </a>
+            <a
+              href="https://github.com/abraaogg"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub <GoArrowUpRight />
+            </a>
+            <a
+              href="https://www.instagram.com/abraaogrigorio_/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Instagram <GoArrowUpRight />
+            </a>
           </div>
         </div>
       </div>

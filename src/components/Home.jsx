@@ -3,7 +3,7 @@ import { FaGithub, FaFileAlt } from "react-icons/fa";
 
 function Home() {
   return (
-    <div className="home">
+    <div className="home" id="home">
       <div className="home-content">
         <h1>ARIS LEE</h1>
         <p>

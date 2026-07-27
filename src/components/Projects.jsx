@@ -28,7 +28,7 @@ function Projects() {
     },
   ];
   return (
-    <div className="projects">
+    <div className="projects" id="projects">
       <div className="projects-content">
       <h2>PROJECTS</h2>
       <div className="cards">

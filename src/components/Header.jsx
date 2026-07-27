@@ -2,6 +2,24 @@ import { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "../styles/header.css";
 
+import { gsap } from "gsap";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+
+gsap.registerPlugin(ScrollToPlugin);
+
+const scrollToSection = (id) => {
+  gsap.to(window, {
+    duration: 1,
+    scrollTo: {
+      y: `#${id}`,
+      offsetY: 80, // prevents the fixed header from covering the title
+    },
+    ease: "power2.inOut",
+  });
+
+  setMenuOpen(false);
+};
+
 function Header() {
   const navItems = [
     { name: "HOME", id: "home" },
@@ -57,7 +75,10 @@ function Header() {
             <a
               key={item.id}
               href={`#${item.id}`}
-              onClick={() => setMenuOpen(false)}
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection(item.id);
+              }}
             >
               {item.name}
             </a>
