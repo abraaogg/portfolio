@@ -32,3 +32,26 @@ body {
   color: #14191c; /* Changes highlighted text color */
   background-color: #617070; /* Changes highlight background color */
 }
+
+.blur-circle {
+  position: fixed;
+
+  width: 500px;
+  height: 500px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgb(0, 163, 162),
+    transparent 70%
+  );
+
+  filter: blur(40px);
+
+  top: -200px;
+  right: -200px;
+
+  z-index: 0;
+  pointer-events: none;
+}

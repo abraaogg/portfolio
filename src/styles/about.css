@@ -1,6 +1,8 @@
 .about {
+  position: relative;
   background-color: #dedede;
   color: var(--subtitle-color);
+  z-index: 1;
 }
 
 .about-container {

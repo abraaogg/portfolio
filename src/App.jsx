@@ -6,10 +6,12 @@ import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import About from "./components/About";
 import Footer from "./components/Footer";
+import BackgroundEffect from "./components/BackgroundEffect";
 
 function App() {
   return (
     <>
+    <BackgroundEffect/>
       <Header />
       <Home />
       <Projects />
