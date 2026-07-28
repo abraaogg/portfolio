@@ -5,10 +5,12 @@
 }
 
 .footer-content {
+  position: relative;
   display: flex;
   flex-direction: column; /* Stack vertically on mobile */
   gap: 32px;
   margin-bottom: 32px;
+  z-index: 10;
 }
 
 .footer-brand h3 {

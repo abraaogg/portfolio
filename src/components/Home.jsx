@@ -14,7 +14,7 @@ function Home() {
           <a href="https://github.com/abraaogg" target="_blank">
             <FaGithub />
           </a>
-          <a href="/curriculo.pdf" target="_blank" rel="noopener noreferrer">
+          <a href="/resume.html" target="_blank" rel="noopener noreferrer">
             <FaFileAlt />
           </a>
         </div>

@@ -41,7 +41,7 @@
   /* Layout & Spacing */
   margin: 1.5rem auto; /* Centers the block and adds vertical spacing */
   text-align: center; /* Align center (or change to 'left' for standard alignment) */
-  width: 100%;
+  width: 80%;
   max-width: 650px;
 
   /* Fine-tuning */
