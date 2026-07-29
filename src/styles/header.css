@@ -4,7 +4,7 @@
   height: 50px;
   top: 0;
   left: 0;
-  padding: 4rem 12%;
+  padding: 4rem 4%;
   background: transparent;
   backdrop-filter: blur(0);
   display: flex;
@@ -15,8 +15,26 @@
 }
 
 .header.scrolled {
-  background: rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(12px);
+  background: transparent;
+  backdrop-filter: none;
+}
+
+.header.scrolled::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+
+  background: rgba(139, 139, 139, 0.6); 
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  mask-image: linear-gradient(to bottom, black, transparent);
+  -webkit-mask-image: linear-gradient(to bottom, black, transparent);
+
+  z-index: -1;
 }
 
 .logo {
@@ -91,19 +109,41 @@
 }
 
 .navbar.open {
-  /* styles when menu is open */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+
   width: 40%;
   gap: 2rem;
   padding: 2rem;
-  background: rgba(0, 0, 0, 0.55);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-left: 2px solid var(--main-color);
-  border-bottom: 2px solid var(--main-color);
-  border-bottom-left-radius: 1rem;
+
+  background: rgba(10, 25, 30, 0.4);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  
+  border-top: 1px solid var(--main-color);
+  border-left: 1px solid var(--main-color);
+  border-bottom: 1px solid var(--main-color);
+
+  border-bottom-left-radius: 1.2rem;
+
+  box-shadow:
+    -10px 10px 40px rgba(0, 0, 0, 0.35),
+    0 0 25px rgba(0, 220, 200, 0.12);
+
+  animation: menuFade 0.25s ease forwards;
+}
+
+@keyframes menuFade {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media (min-width: 1200px) {

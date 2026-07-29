@@ -14,7 +14,11 @@ function Home() {
           <a href="https://github.com/abraaogg" target="_blank">
             <FaGithub />
           </a>
-          <a href="/resume.html" target="_blank" rel="noopener noreferrer">
+          <a
+            href={`${import.meta.env.BASE_URL}resume.html`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FaFileAlt />
           </a>
         </div>
