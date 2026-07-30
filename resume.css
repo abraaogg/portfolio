@@ -8,7 +8,7 @@ body {
   min-height: 100vh;
   background: linear-gradient(
     354deg,
-    rgba(19, 26, 29, 1) 60%,
+    rgba(19, 26, 29, 1) 80%,
     rgba(0, 163, 162, 1) 100%
   );
   color: #ffffff;
@@ -21,6 +21,7 @@ body {
 }
 
 .resume-container {
+  width: 80%;
   text-align: center;
   padding: 2rem;
 }
