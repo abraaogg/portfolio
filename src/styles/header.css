@@ -5,34 +5,27 @@
   top: 0;
   left: 0;
   padding: 4rem 4%;
-  background: transparent;
-  backdrop-filter: blur(0);
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 10;
-  transition: all 0.3s ease;
 }
 
-.header.scrolled {
-  background: transparent;
-  backdrop-filter: none;
-}
-
-.header.scrolled::before {
+.header::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+  inset: 0 0 auto 0;
   height: 60px;
 
-  background: rgba(139, 139, 139, 0.6); 
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: rgba(139, 139, 139, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 
   mask-image: linear-gradient(to bottom, black, transparent);
   -webkit-mask-image: linear-gradient(to bottom, black, transparent);
+
+  opacity: 1;
+  transition: opacity 0.3s ease;
 
   z-index: -1;
 }
@@ -71,9 +64,9 @@
 .navbar {
   /* default styles */
   display: none;
-  position: fixed;
-  top: 100%;
-  right: 0;
+     position: absolute;
+    top: 100%;
+    right: 0;
 }
 .navbar a {
   position: relative;

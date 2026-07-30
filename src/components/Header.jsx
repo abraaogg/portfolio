@@ -43,22 +43,8 @@ function Header() {
     };
   }, []);
 
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 100);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   return (
-    <header className={scrolled ? "header scrolled" : "header"}>
+    <header className="header">
       <a href="#home" className="logo">
         ARIS <span>LEE</span>
       </a>
