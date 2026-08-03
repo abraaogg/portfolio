@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 import Header from "./components/Header";
 import Home from "./components/Home";
@@ -7,11 +7,25 @@ import Skills from "./components/Skills";
 import About from "./components/About";
 import Footer from "./components/Footer";
 import BackgroundEffect from "./components/BackgroundEffect";
+import LoadingScreen from "./components/LoadingScreen";
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(true);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return <LoadingScreen />;
+  }
   return (
     <>
-    <BackgroundEffect/>
+      <BackgroundEffect />
       <Header />
       <Home />
       <Projects />
