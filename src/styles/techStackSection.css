@@ -1,0 +1,113 @@
+.tech-stack {
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-color);
+  color: var(--text-color);
+  padding: 8rem 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    sans-serif;
+}
+
+.tech-stack__glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1000px;
+  height: 520px;
+  transform: translate(-50%, -50%);
+  border-radius: 9999px;
+  filter: blur(100px);
+  opacity: 0.6;
+  pointer-events: none;
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(14, 214, 205, 0.28),
+    transparent 70%
+  );
+}
+
+.tech-stack__inner {
+  position: relative;
+  width: 90vw;
+  max-width: 1200px;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.tech-stack__head {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.tech-stack__title {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.35em;
+  color: var(--text-color);
+}
+
+.tech-stack__rule {
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.tech-stack__grid {
+  list-style: none;
+  margin: 5rem 0 0;
+  padding: 0;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 2.5rem;
+  row-gap: 4rem;
+}
+
+@media (min-width: 640px) {
+  .tech-stack__grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+.tech-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.tech-card__icon {
+  display: inline-flex;
+  opacity: 0.8;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.tech-card__icon svg {
+  width: 4rem;
+  height: 4rem;
+}
+
+.tech-card__name {
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+  color: var(--text-color);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.tech-card:hover .tech-card__icon {
+  opacity: 1;
+  transform: scale(1.08);
+}
+
+.tech-card:hover .tech-card__name {
+  opacity: 1;
+}

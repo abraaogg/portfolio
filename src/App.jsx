@@ -8,13 +8,14 @@ import About from "./components/About";
 import Footer from "./components/Footer";
 import BackgroundEffect from "./components/BackgroundEffect";
 import LoadingScreen from "./components/LoadingScreen";
+import TechStackSection from "./components/TechStackSection";
 
 function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setLoading(true);
+      setLoading(false);
     }, 2000);
 
     return () => clearTimeout(timer);
@@ -29,7 +30,8 @@ function App() {
       <Header />
       <Home />
       <Projects />
-      <Skills />
+        <TechStackSection/>
+   
       <About />
       <Footer />
     </>

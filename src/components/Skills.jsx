@@ -1,11 +1,5 @@
 import React from "react";
 import "../styles/skills.css";
-import reactImg from "../imgs/react-icon.svg.webp";
-import nextJsImg from "../imgs/next.js-img.webp";
-import nodeJsImg from "../imgs/node-js-img.webp";
-import gsapImg from "../imgs/gsap-img.webp";
-import cssImg from "../imgs/css-icon.webp";
-import sqlImg from "../imgs/sql-logo.webp";
 
 function Skills() {
   const skills = [
