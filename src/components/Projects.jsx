@@ -24,7 +24,7 @@ function Projects() {
       image: weatherImg,
       title: "Weather",
       description: "Live weather forecasts.",
-      page: "https://github.com/...",
+      page: "https://abraaogg.github.io/Js-Projects/weather-app%20(prototype)/index.html",
     },
   ];
   return (

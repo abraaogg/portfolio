@@ -1,60 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  font-family: "Sora", sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
 }
 
 body {
-  min-height: 100vh;
-  background: linear-gradient(
-    354deg,
-    rgba(19, 26, 29, 1) 80%,
-    rgba(0, 163, 162, 1) 100%
-  );
-  color: #ffffff;
+  min-height: 100dvh;
+  min-height: -webkit-fill-available; /* Safari fallback */
 
   display: flex;
   justify-content: center;
   align-items: center;
 
-  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(
+    354deg,
+    rgba(19, 26, 29, 1) 80%,
+    rgba(0, 163, 162, 1) 100%
+  );
+
+  color: #fff;
 }
 
 .resume-container {
-  width: 80%;
-  text-align: center;
+  width: 100%;
+  max-width: 500px;
   padding: 2rem;
+  text-align: center;
 }
 
 .resume-container h1 {
-  font-size: clamp(1.4rem);
-  font-weight: 600;
-  letter-spacing: -0.03em;
-
-  margin-bottom: 2.5rem;
+  font-size: 2rem;
+  margin-bottom: 2rem;
 }
 
 .resume-options {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 1rem;
 }
 
 .resume-options a {
-  width: 220px;
-
+  width: 100%;
   padding: 1rem;
 
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 8px;
 
+  background: rgba(255, 255, 255, 0.05);
   color: white;
   text-decoration: none;
-
-  font-size: 1rem;
   font-weight: 600;
-
-  background: rgba(255, 255, 255, 0.05);
 
   transition: all 0.25s ease;
 }
@@ -62,6 +69,16 @@ body {
 .resume-options a:hover {
   background: rgba(255, 255, 255, 0.12);
   border-color: rgba(255, 255, 255, 0.4);
-
   transform: translateY(-2px);
+}
+
+@media (min-width: 768px) {
+  .resume-options {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .resume-options a {
+    max-width: 220px;
+  }
 }

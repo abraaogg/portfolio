@@ -1,5 +1,3 @@
-import { useState, useEffect } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
 import "../styles/header.css";
 
 import { gsap } from "gsap";
@@ -16,8 +14,6 @@ const scrollToSection = (id) => {
     },
     ease: "power2.inOut",
   });
-
-  setMenuOpen(false);
 };
 
 function Header() {
@@ -28,49 +24,34 @@ function Header() {
     { name: "ABOUT", id: "about" },
   ];
 
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth >= 1200) {
-        setMenuOpen(false);
-      }
-    };
-
-    window.addEventListener("resize", handleResize); // Whenever the window is resized, run handleResize.
-
-    return () => {
-      window.removeEventListener("resize", handleResize); // When this component (Header.jsx) is removed, stop listening for resize events.
-    };
-  }, []);
-
   return (
     <header className="header">
-      <a href="#home" className="logo">
-        ARIS <span>LEE</span>
+      <a
+        href="#home"
+        className="logo"
+        onClick={(e) => {
+          e.preventDefault();
+          scrollToSection("home");
+        }}
+      >
+        ABRAÃO
+        <span className="logo-dot"></span>
+        GRIGÓRIO
       </a>
-      <button className="menuIcon" onClick={() => setMenuOpen((prev) => !prev)}>
-        {menuOpen ? <FaTimes /> : <FaBars />}
-      </button>
 
-      <nav className={menuOpen ? "navbar open" : "navbar"}>
-        {navItems.map((item) => {
-          return (
-            // for each Item inside navItems, return one <a>
-            // key → helps React track list items.
-            // href → tells the browser where to scroll.
-            <a
-              key={item.id}
-              href={`#${item.id}`}
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToSection(item.id);
-              }}
-            >
-              {item.name}
-            </a>
-          );
-        })}
+      <nav className="navbar">
+        {navItems.map((item) => (
+          <a
+            key={item.id}
+            href={`#${item.id}`}
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToSection(item.id);
+            }}
+          >
+            {item.name}
+          </a>
+        ))}
       </nav>
     </header>
   );

@@ -5,7 +5,7 @@ function Home() {
   return (
     <div className="home" id="home">
       <div className="home-content">
-        <h1>ARIS LEE</h1>
+        <h1>ABRAÃO GRIGÓRIO</h1>
         <p>
           Transforming ideas into modern, responsive, and interactive web
           experiences.
