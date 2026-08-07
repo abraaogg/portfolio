@@ -15,7 +15,7 @@ const Footer = () => {
       <div className="footer-content">
         {/* Brand Info */}
         <div className="footer-brand">
-          <h3>ARIS LEE</h3>
+          <h3>ABRAÃO GRIGÓRIO</h3>
           <p>Web Developer & Designer</p>
         </div>
 
@@ -56,7 +56,7 @@ const Footer = () => {
       </div>
 
       <div className="footer-bottom">
-        <p>© {new Date().getFullYear()} Aris Lee. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} Abraão Grigório. All rights reserved.</p>
         <button onClick={scrollToTop} className="back-to-top">
           BACK TO TOP ↑
         </button>

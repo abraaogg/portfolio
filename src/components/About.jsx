@@ -27,7 +27,7 @@ function About() {
   return (
     <div ref={aboutRef} className="about" id="about">
       <div className="about-container">
-        <h2>ABOUT ARIS</h2>
+        <h2>ABOUT ABRAÃO</h2>
 
         <img
           className="profile-image"
