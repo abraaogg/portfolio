@@ -47,7 +47,7 @@
   width: 0.35em;
   height: 0.35em;
 
-  border-radius: 8%;
+  border-radius: 20%;
   background: var(--main-color);
 
   box-shadow: 0 0 10px var(--main-color);
