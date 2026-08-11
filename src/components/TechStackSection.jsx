@@ -82,17 +82,14 @@ const techStack = [
     ),
   },
   {
-    name: "SQL",
-    color: "#336791",
+    name: "HTML",
+    color: "#E34F26",
     icon: (
       <svg viewBox="0 0 32 32">
-        <ellipse cx="16" cy="8" rx="9.5" ry="3.8" {...stroke} />
+        <path d="M5 3h22l-2 24-9 3-9-3L5 3z" fill="none" {...stroke} />
         <path
-          d="M6.5 8v16c0 2.1 4.3 3.8 9.5 3.8s9.5-1.7 9.5-3.8V8"
-          {...stroke}
-        />
-        <path
-          d="M6.5 16c0 2.1 4.3 3.8 9.5 3.8s9.5-1.7 9.5-3.8"
+          d="M10 9h12l-.5 5H11l.3 4h10.4l-.7 6-4 1.3-4-1.3-.3-3"
+          fill="none"
           {...stroke}
         />
       </svg>
@@ -114,16 +111,11 @@ export default function TechStackSection() {
         <ul className="tech-stack__grid">
           {techStack.map((tech) => (
             <li className="tech-card" key={tech.name}>
-              <span
-                className="tech-card__icon"
-                style={{ color: tech.color }}
-              >
+              <span className="tech-card__icon" style={{ color: tech.color }}>
                 {tech.icon}
               </span>
 
-              <span className="tech-card__name">
-                {tech.name}
-              </span>
+              <span className="tech-card__name">{tech.name}</span>
             </li>
           ))}
         </ul>
