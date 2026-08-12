@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import { useRef } from "react"; // useRef creates a reference you can keep and use later.
 import "../styles/about.css";
 import profileImg from "../imgs/profile.jpeg";
 import { GoArrowUpRight } from "react-icons/go";
@@ -21,7 +21,7 @@ function About() {
         ease: "sine.inOut",
       });
     },
-    { scope: aboutRef }
+    { scope: aboutRef }, // Only look for .profile-image inside this About section.
   );
 
   return (
@@ -29,11 +29,7 @@ function About() {
       <div className="about-container">
         <h2>ABOUT ABRAÃO</h2>
 
-        <img
-          className="profile-image"
-          src={profileImg}
-          alt="Profile Picture"
-        />
+        <img className="profile-image" src={profileImg} alt="Profile Picture" />
 
         <p>
           I like building websites that are fast, clean, and just a little bit
