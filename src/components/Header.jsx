@@ -8,6 +8,7 @@ gsap.registerPlugin(useGSAP, ScrollToPlugin);
 
 const scrollToSection = (id) => {
   gsap.to(window, {
+    // window refers to the browser's global window — essentially the environment containing the current webpage.
     duration: 1,
     scrollTo: {
       y: `#${id}`,
