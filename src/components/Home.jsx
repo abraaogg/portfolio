@@ -17,7 +17,7 @@ useGSAP((self) => {
     trigger: ".home-content",
     start: "top 80%",
     onEnter: () => {
-      gsap.from(self.selector(".home-content > *"), {
+      gsap.from(self.selector(".home-content > *"), { // Using > * lets GSAP treat each child separately
         opacity: 0,
         y: 10,
         filter: "blur(8px)",
@@ -61,7 +61,7 @@ useGSAP((self) => {
           </a>
 
           <a
-            href={`${import.meta.env.BASE_URL}resume.html`}
+            href={`${import.meta.env.BASE_URL}resume.html`} // This is a Vite environment value
             target="_blank"
             rel="noopener noreferrer"
           >
