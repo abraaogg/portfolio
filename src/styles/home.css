@@ -1,11 +1,26 @@
 .home {
+  position: relative;
   min-height: 110vh;
-  background: url("../imgs/home-background.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+
   display: flex;
   align-items: center;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.home::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: url("../imgs/home-background.png") center / cover no-repeat;
+
+  z-index: -1;
+}
+
+.home-content {
+  position: relative;
+  z-index: 1;
 }
 
 .home-content {
