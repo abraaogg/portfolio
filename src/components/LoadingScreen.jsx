@@ -44,6 +44,7 @@ function LoadingScreen() {
 
       if (!cancelled) {
         setLoading(false);
+        window.dispatchEvent(new Event("loadingComplete"));
       }
     };
 
@@ -61,6 +62,7 @@ function LoadingScreen() {
       <div className="loading-screen-logo">
         A<span className="dot"></span>G
       </div>
+
       <div className="loading-bar">
         <span></span>
       </div>

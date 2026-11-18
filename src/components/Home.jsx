@@ -12,34 +12,36 @@ gsap.registerPlugin(useGSAP, ScrollTrigger);
 function Home() {
   const homeRef = useRef();
 
-useGSAP((self) => {
-  ScrollTrigger.create({
-    trigger: ".home-content",
-    start: "top 80%",
-    onEnter: () => {
-      gsap.from(self.selector(".home-content > *"), { // Using > * lets GSAP treat each child separately
-        opacity: 0,
-        y: 10,
-        filter: "blur(8px)",
-        stagger: 0.15,
-        duration: 0.8,
-        ease: "power2.out",
-        clearProps: "filter",
+  useGSAP(
+    (self) => {
+      const animateContent = () => {
+        gsap.from(self.selector(".home-content > *"), {
+          opacity: 0,
+          y: 10,
+          filter: "blur(8px)",
+          stagger: 0.15,
+          duration: 0.8,
+          ease: "power2.out",
+          clearProps: "filter",
+        });
+      };
+
+      // Wait for loading screen
+      window.addEventListener("loadingComplete", animateContent);
+
+      // Replay when scrolling back into view
+      ScrollTrigger.create({
+        trigger: ".home-content",
+        start: "top 80%",
+        onEnterBack: animateContent,
       });
+
+      return () => {
+        window.removeEventListener("loadingComplete", animateContent);
+      };
     },
-    onEnterBack: () => {
-      gsap.from(self.selector(".home-content > *"), {
-        opacity: 0,
-        y: 10,
-        filter: "blur(8px)",
-        stagger: 0.15,
-        duration: 0.8,
-        ease: "power2.out",
-        clearProps: "filter",
-      });
-    },
-  });
-}, { scope: homeRef });
+    { scope: homeRef },
+  );
 
   return (
     <div ref={homeRef} className="home" id="home">
@@ -61,7 +63,7 @@ useGSAP((self) => {
           </a>
 
           <a
-            href={`${import.meta.env.BASE_URL}resume.html`} // This is a Vite environment value
+            href={`${import.meta.env.BASE_URL}resume.html`}
             target="_blank"
             rel="noopener noreferrer"
           >

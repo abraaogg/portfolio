@@ -1,14 +1,11 @@
 import "../styles/header.css";
-import { useRef } from "react";
 import { gsap } from "gsap";
-import { useGSAP } from "@gsap/react";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
-gsap.registerPlugin(useGSAP, ScrollToPlugin);
+gsap.registerPlugin(ScrollToPlugin);
 
 const scrollToSection = (id) => {
   gsap.to(window, {
-    // window refers to the browser's global window — essentially the environment containing the current webpage.
     duration: 1,
     scrollTo: {
       y: `#${id}`,
@@ -19,27 +16,6 @@ const scrollToSection = (id) => {
 };
 
 function Header() {
-  const headerRef = useRef();
-
-  useGSAP(
-    (self) => {
-      gsap.fromTo(
-        self.selector(".logo, .navbar a"),
-        {
-          opacity: 0,
-          y: 20,
-        },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.8,
-          ease: "power3.out",
-        },
-      );
-    },
-    { scope: headerRef },
-  );
-
   const navItems = [
     { name: "HOME", id: "home" },
     { name: "PROJECTS", id: "projects" },
@@ -48,7 +24,7 @@ function Header() {
   ];
 
   return (
-    <header ref={headerRef} className="header">
+    <header className="header">
       <a
         href="#home"
         className="logo"
